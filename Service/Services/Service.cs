@@ -55,7 +55,7 @@ namespace Service.Services
             return _repository.GetById(id);
         }
 
-        public virtual IValidationModel Insert(T obj)
+        public virtual IValidationModel Insert(ref T obj)
         {
             var statusModel = IsValid(obj);
 
@@ -86,7 +86,7 @@ namespace Service.Services
             }
             return validationModel;
         }
-        public virtual IValidationModel Update(T obj)
+        public virtual IValidationModel Update(ref T obj)
         {
             var statusModel = IsValid(obj);
 

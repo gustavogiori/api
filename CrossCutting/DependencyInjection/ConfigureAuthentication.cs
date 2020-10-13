@@ -7,7 +7,7 @@ namespace CrossCutting.DependencyInjection
 {
     public class ConfigureAuthentication
     {
-        public void ConfigureDependencyAuthentication(IServiceCollection services)
+        public static void ConfigureDependencyAuthentication(IServiceCollection services)
         {
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(x =>

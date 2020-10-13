@@ -11,9 +11,15 @@ namespace Data.Context
     {
         public DbSet<UserEntity> Users { get; set; }
 
+
         public MyContext(DbContextOptions<MyContext> options) : base(options)
         {
 
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var teste = optionsBuilder.IsConfigured;
+            base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,13 +29,14 @@ namespace Data.Context
             modelBuilder.Entity<UserEntity>().HasData(
                 new UserEntity
                 {
+                    Id = 1,
                     Name = "Administrador",
                     Email = "gustavogiori22@hotmail.com",
                     Password = "123",
                     CreateAt = DateTime.Now,
                     UpdateAt = DateTime.Now,
                 }
-            ); ;
+            );
         }
 
     }

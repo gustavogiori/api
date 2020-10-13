@@ -16,8 +16,8 @@ namespace CrossCutting.Filter
         }
         public IPaginationFilter GetValidValues(int pageNumber, int pageSize)
         {
-            pageNumber = pageNumber < 1 ? 1 : pageNumber;
-            pageSize = pageSize > 5 ? 5 : pageSize;
+            pageNumber = pageNumber == 0 ? 1 : pageNumber;
+            pageSize = pageSize == 0 ? 5 : pageSize;
             return new PaginationFilter() { PageNumber = pageNumber, PageSize = pageSize };
         }
     }

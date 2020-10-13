@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReactApi</name>
+    </assembly>
+    <members>
+        <member name="T:ReactApi.Controllers.BaseController">
+            <summary>
+            Controle base
+            </summary>
+        </member>
+        <member name="M:ReactApi.Controllers.BaseController.#ctor(Microsoft.EntityFrameworkCore.DbContext,Domain.Interfaces.IUnitOfWork,Domain.Interfaces.IUriService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="context"></param>
+            <param name="unitOfWork"></param>
+            <param name="uriService"></param>
+        </member>
+        <member name="F:ReactApi.Controllers.BaseController._context">
+            <summary>
+            Base de dados
+            </summary>
+        </member>
+        <member name="F:ReactApi.Controllers.BaseController._unitOfWork">
+            <summary>
+            Unidade de trabalho
+            </summary>
+        </member>
+        <member name="F:ReactApi.Controllers.BaseController._uriService">
+            <summary>
+            Uri Service
+            </summary>
+        </member>
+        <member name="M:ReactApi.Controllers.UsersController.#ctor(Microsoft.EntityFrameworkCore.DbContext,Domain.Interfaces.IUnitOfWork,Domain.Interfaces.IUriService,Domain.Interfaces.Services.User.IUserService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context"></param>
+            <param name="usuarioBusiness"></param>
+            <param name="unitOfWork"></param>
+            <param name="uriService"></param>
+        </member>
+        <member name="M:ReactApi.Controllers.UsersController.GetUsuarios(System.Int32,System.Int32)">
+            <summary>
+            Retornar todos os usuários
+            </summary>
+            <returns>Lista de usuários</returns>
+            <response code="200">Retorna lista com todos usuários</response>
+            <response code="401">Retorna quando não estiver autenticado.</response>
+        </member>
+    </members>
+</doc>

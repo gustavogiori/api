@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Data.Context;
+using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -41,7 +42,9 @@ namespace Data.Repository
         }
         public virtual T Insert(T obj)
         {
+            obj.CreateAt = DateTime.UtcNow;
             table.Add(obj);
+            _context.SaveChanges();
             return obj;
 
         }

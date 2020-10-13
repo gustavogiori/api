@@ -12,6 +12,7 @@ namespace Service.Services
     {
         public UserService(IUserRepository repository) : base(repository)
         {
+          
         }
     }
 }

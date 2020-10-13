@@ -7,6 +7,7 @@ namespace Domain.Dto.User
 {
     public class UserDtoCrud
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "Nome é um campo obrigatório")]
         [StringLength(60, ErrorMessage = "Nome deve ter no máximo {1} caracteres.")]
         public string Name { get; set; }

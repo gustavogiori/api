@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8C8EF54A-E1B0-4065-B5B2-DE838B26A3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{8C8EF54A-E1B0-4065-B5B2-DE838B26A3FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{103498DE-8638-462A-8C6B-B65425E9A23F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{103498DE-8638-462A-8C6B-B65425E9A23F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{EC78764F-1887-4D3C-BEA8-92ADBDBB1FCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{EC78764F-1887-4D3C-BEA8-92ADBDBB1FCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{0E14B061-9CE0-4C6F-B520-7061AD3A18E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{0E14B061-9CE0-4C6F-B520-7061AD3A18E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactApi", "ReactApi\ReactApi.csproj", "{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApi", "AngularApi\AngularApi.csproj", "{F242AAA0-BA98-4325-AA8E-F2BA62E85755}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,30 @@ Global
 		{0E14B061-9CE0-4C6F-B520-7061AD3A18E5}.Release|x64.Build.0 = Release|Any CPU
 		{0E14B061-9CE0-4C6F-B520-7061AD3A18E5}.Release|x86.ActiveCfg = Release|Any CPU
 		{0E14B061-9CE0-4C6F-B520-7061AD3A18E5}.Release|x86.Build.0 = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|x64.Build.0 = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Debug|x86.Build.0 = Debug|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|x64.ActiveCfg = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|x64.Build.0 = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|x86.ActiveCfg = Release|Any CPU
+		{5AAB7FA0-7BA8-4A03-B83E-6706221D8DF6}.Release|x86.Build.0 = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|x64.Build.0 = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Debug|x86.Build.0 = Debug|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|x64.ActiveCfg = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|x64.Build.0 = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|x86.ActiveCfg = Release|Any CPU
+		{F242AAA0-BA98-4325-AA8E-F2BA62E85755}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

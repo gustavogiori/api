@@ -14,8 +14,8 @@ namespace Domain.Interfaces.Services
         IEnumerable<T> GetByCriteria(Expression<Func<T, bool>> predicate, IPaginationFilter filter, out int countPages);
         IEnumerable<T> GetByCriteria(Expression<Func<T, bool>> predicate);
         T GetById(TKey id);
-        IValidationModel Insert(T obj);
-        IValidationModel Update(T obj);
+        IValidationModel Insert(ref T obj);
+        IValidationModel Update(ref T obj);
         void Delete(TKey id);
     }
 }
