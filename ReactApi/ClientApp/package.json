@@ -1,54 +1,74 @@
 {
-  "name": "reactapi",
-  "version": "0.1.0",
+  "name": "doj-react-adminlte-dev",
+  "version": "0.7.2",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "repository": "dojph/react-adminlte",
+  "homepage": "http://dojph.github.io/react-adminlte/",
   "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "connected-react-router": "6.5.2",
-    "history": "4.10.1",
-    "jquery": "^3.4.1",
-    "merge": "1.2.1",
-    "popper.js": "^1.16.0",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-redux": "7.1.1",
-    "react-router": "5.1.2",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "^3.4.1",
-    "reactstrap": "8.1.1",
-    "redux": "4.0.4",
-    "redux-thunk": "2.3.0",
-    "svgo": "1.3.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
-  "devDependencies": {
-    "@types/history": "4.7.3",
-    "@types/jest": "24.0.19",
-    "@types/node": "12.11.6",
-    "@types/react": "16.9.9",
-    "@types/react-dom": "16.9.2",
-    "@types/react-redux": "7.1.5",
-    "@types/react-router": "5.1.2",
-    "@types/react-router-dom": "5.1.0",
-    "@types/reactstrap": "8.0.6",
-    "@typescript-eslint/parser": "^2.5.0",
-    "cross-env": "6.0.3",
-    "eslint": "^6.5.1",
-    "eslint-plugin-flowtype": "^3.13.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-react": "7.16.0",
-    "nan": "^2.14.1",
-    "typescript": "3.6.4"
+  "author": {
+    "name": "Justin Dane Vallar",
+    "email": "jdvallar@gmail.com",
+    "url": "https://github.com/vallarj"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "adminlte",
+    "react-adminlte",
+    "react",
+    "components"
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react-popper": "^1.0.0",
+    "react-resize-aware": "^2.7.0",
+    "react-select": "^3.0.4",
+    "react-smooth-collapse": "^2.1.0",
+    "react-transition-group": "^2.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/**/*.ts ./src/**/*.tsx"
+    "prestart": "npm run gen:docs",
+    "start": "npm-run-all --parallel start:docs gen:docs-watch",
+    "start:docs": "react-scripts start",
+    "gen:docs": "node scripts/generate-component-data.js",
+    "gen:docs-watch": "npm run gen:docs -- --watch",
+    "prebuild:docs": "npm run gen:docs",
+    "build:docs": "react-scripts build",
+    "predeploy:docs": "npm run build:docs",
+    "deploy:docs": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "npm-run-all build:commonjs build:css build:copy-files",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "build:css": "copyfiles -u 2 \"./src/components/**/*.css\" ./lib",
+    "build:copy-files": "node scripts/copy-build-files.js",
+    "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "peerDependencies": {
+    "moment": "^2.22.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@vallarj/react-scripts": "^3.1.0",
+    "chokidar": "^3.0.1",
+    "copyfiles": "^2.1.0",
+    "cross-env": "^5.1.6",
+    "gh-pages": "^2.0.1",
+    "moment": "^2.22.1",
+    "npm-run-all": "^4.1.3",
+    "react": "^16.9.0",
+    "react-docgen": "^4.1.1",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-syntax-highlighter": "^7.0.4",
+    "rimraf": "^2.6.2"
   },
   "browserslist": [
     ">0.2%",

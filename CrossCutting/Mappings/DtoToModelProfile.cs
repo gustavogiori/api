@@ -16,6 +16,11 @@ namespace CrossCutting.Mappings
                     .ReverseMap();
             CreateMap<UserDto, UserEntity>()
                    .ReverseMap();
+            CreateMap<UserDtoCrud, UserEntity>()
+            .ReverseMap();
+            CreateMap<UserEntity, UserDtoCrud>()
+           .ReverseMap();
+
         }
     }
 }

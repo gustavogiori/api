@@ -1,0 +1,58 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transition: opacity .15s linear;
+}
+
+.modal-exit {
+    opacity: 1;
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+
+.modal-dialog-enter {
+    transform: translate(0, -25%);
+}
+
+.modal-dialog-enter-active {
+    transform: translate(0, 0);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-dialog-exit {
+    transform: translate(0, 0);
+}
+
+.modal-dialog-exit-active {
+    transform: translate(0, -25%);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-overlay {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.35) none repeat scroll 0 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-overlay i {
+    display: flex;
+    font-size: 32px;
+}
